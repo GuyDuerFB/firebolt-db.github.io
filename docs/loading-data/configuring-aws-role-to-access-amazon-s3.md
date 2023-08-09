@@ -15,6 +15,10 @@ Firebolt uses AWS Identity and Access Management \(IAM\) permissions to load dat
 
 This topic provides instructions for setting up an IAM role and an AWS IAM permissions policy that allows the actions that Firebolt requires to read data from an S3 location.
 
+Have a look at this short video guiding you through the process. Part I of the video, describing how to register Firebolt, [can be found here](https://docs.firebolt.io/managing-your-account/creating-an-account.html).
+
+<iframe width="560" height="315" src="https://youtu.be/KUGxCcxf5Bg" title="Part 2 - Getting Started With Firebolt - Setup Your Permissions and Roles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 1. Topic ToC
 {:toc}
 
@@ -98,6 +102,9 @@ In the AWS Management Console, create an AWS IAM role. The IAM role will assume 
 9. Record the **Role ARN** listed on the role summary page.
 
 ## Increase the max session duration for your AWS role
+
+{: .note}
+Starting in DB version 3.23, increasing the max session duration is no longer necessary. 
 
 1. Log in to the [AWS Identity and Access Management \(IAM\) Console](https://console.aws.amazon.com/iam/home#/home).
 2. From the left navigation panel, choose **Roles**.
