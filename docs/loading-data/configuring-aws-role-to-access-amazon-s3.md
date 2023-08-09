@@ -15,6 +15,10 @@ Firebolt uses AWS Identity and Access Management \(IAM\) permissions to load dat
 
 This topic provides instructions for setting up an IAM role and an AWS IAM permissions policy that allows the actions that Firebolt requires to read data from an S3 location.
 
+Have a look at this short video guiding you through the process. Part I of the video, describing how to register Firebolt, [can be found here](https://docs.firebolt.io/managing-your-account/creating-an-account.html).
+
+<iframe width="560" height="315" src="https://youtu.be/KUGxCcxf5Bg" title="Part 2 - Getting Started With Firebolt - Setup Your Permissions and Roles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 1. Topic ToC
 {:toc}
 
