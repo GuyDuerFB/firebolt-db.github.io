@@ -17,8 +17,8 @@ Firebolt continuously releases updates so that you can benefit from the latest a
 {: .note}
 Firebolt might roll out releases in phases. New features and changes may not yet be available to all accounts on the release date shown.
 
-## DB version 3.30
-**November 2023**
+## DB version 3.31
+**February 2024**
 
 * [New features](#new-features)
 * [Enhancements, changes, and new integrations](#enhancements-changes-and-new-integrations)
@@ -26,15 +26,26 @@ Firebolt might roll out releases in phases. New features and changes may not yet
 
 ### New features
 
-<!--- FIR-27590 ---> **New comparison operators**
+<!--- FIR-22307 ---> **PG compliant division**
 
-[New comparison operators](../general-reference/operators.md#comparison) `IS DISTINCT FROM` and `IS NOT DISTINCT FROM` have been added.
+LQP2 now has a new division operator that is PG compliant, by default.
+
+<!--- FIR-29179 ---> **Prevents usage of new line delimeter for schema inference.**
+
+An error will now occur if schema inference is used with the option “delimiter” set to something other than the default. 
 
 ### Enhancements, changes and new integrations
 
-<!--- FIR-27355 ---> **Support for nullable arrays**
+<!--- FIR-29747 ---> **Disabled Unix Time Functions**
 
-Support has been added to allow the [ANY_MATCH](../sql-reference/functions-reference/any-match.md) lambda function to work with nullable arrays.
+The following functions will not be supported anymore:
+- from_unixtime
+- to_unix_timestamp
+- to_unix_time
+
+<!--- FIR-27548 ---> **Simplified table protobuf representation**
+
+
 
 ### Resolved issues
 
