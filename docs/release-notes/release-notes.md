@@ -30,7 +30,7 @@ Firebolt might roll out releases in phases. New features and changes may not yet
 
 LQP2 has a new division operator that is PG compliant, by default.
 
-<!--- FIR-29179 --->**Prevents usage of new line delimeter for schema inference.**
+<!--- FIR-29179 --->**Prevents usage of new line delimeter for schema inference**
 
 An error will now occur if schema inference is used with the option “delimiter” set to something other than the default. 
 
