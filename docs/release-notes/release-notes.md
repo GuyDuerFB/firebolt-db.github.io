@@ -38,14 +38,18 @@ An error will now occur if schema inference is used with the option “delimiter
 
 <!--- FIR-29747 ---> **Disabled Unix Time Functions**
 
-The following functions will not be supported anymore:
-- from_unixtime
-- to_unix_timestamp
-- to_unix_time
+The following functions are not supported anymore:
+'from_unixtime'
+'to_unix_timestamp'
+'to_unix_time'
 
 <!--- FIR-27548 ---> **Simplified table protobuf representation**
 
+Unique constraints in tables will be blocked for new accounts.
 
+<!--- FIR-29729 ---> **Renamed spilled metrics columns**
+
+The columns `spilled_bytes_uncompressed` and `spilled_bytes_compressed` of `information_schema.query_history` have been replaced by a single column `spilled_bytes`. It contains the amount of data that was spilled to disk temporarily while executing the query.
 
 ### Resolved issues
 
