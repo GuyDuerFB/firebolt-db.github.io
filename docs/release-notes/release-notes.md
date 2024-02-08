@@ -28,7 +28,7 @@ Firebolt might roll out releases in phases. New features and changes may not yet
 
 <!--- FIR-22307 --->**PG compliant division**
 
-LQP2 now has a new division operator that is PG compliant, by default.
+LQP2 has a new division operator that is PG compliant, by default.
 
 <!--- FIR-29179 --->**Prevents usage of new line delimeter for schema inference.**
 
