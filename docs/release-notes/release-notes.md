@@ -47,4 +47,4 @@ Reading of Parquet/ORC integer columns will now not be allowed if the external t
 
 <!--- FIR-18709 --->Updated error log for upload failure for clarity
 
-<!--- FIR-29759 --->TRY_CAST from TEXT to NUMERIC now works as expected: if the value cannot be parsed as NUMERIC it produces null
+<!--- FIR-29759 --->TRY_CAST from TEXT to NUMERIC now works as expected: if the value cannot be parsed as NUMERIC it produces null.
