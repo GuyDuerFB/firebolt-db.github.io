@@ -17,34 +17,18 @@ Firebolt continuously releases updates so that you can benefit from the latest a
 {: .note}
 Firebolt might roll out releases in phases. New features and changes may not yet be available to all accounts on the release date shown.
 
-## DB version 3.31
-**February 2024**
+## DB version 3.32
+**March 2024**
 
 * [Enhancements, changes, and new integrations](#enhancements-changes-and-new-integrations)
-* [Resolved issues](#resolved-issues)
 
 ### Enhancements, changes and new integrations
 
-<!--- FIR-27548 --->**Simplified table protobuf representation**
+<!--- FIR-25082 --->**New Features for 'EXPLAIN'**
 
-Unique constraints in tables will be blocked for new accounts.
+Added new features to `EXPLAIN`.
+You can now use the ([`EXPLAIN`](../../sql-reference/commands/explain.md) command) to execute `EXPLAIN (ANALYZE) <select statement>` and get detailed metrics about how much time is spent on each operator in the query plan, as well as how much data it processes. The query plan shown is the physical query plan, which you can inspect using `EXPLAIN (PHYSICAL) <select statement>` without executing the query. It shows how query processing is distributed over the nodes of an engine. 
 
-<!--- FIR-29729 --->**Renamed spilled metrics columns**
+<!--- FIR-30398 --->**Align the syntax of our "escape" string literals with PostgreSQL**
 
-The columns `spilled_bytes_uncompressed` and `spilled_bytes_compressed` of `information_schema.query_history` have been replaced by a single column `spilled_bytes`. It contains the amount of data that was spilled to disk temporarily while executing the query.
-
-<!--- FIR-28276 --->**New requirements updated for EXPLAIN**
-
-For `EXPLAIN` queries, we now allow only one of the following options at the same time: `ALL`, `LOGICAL`, `PHYSICAL`, `ANALYZE`.`EXPLAIN (ALL)` now returns the plans in multiple rows instead of multiple columns.
-
-<!--- FIR-29660 --->**Range violation implement for import of parquet INT columns into PDGATE columns**
-
-Reading of Parquet/ORC integer columns will now not be allowed if the external table specifies the types of those columns to be one of the new DATE, TIMESTAMP, TIMESTAMPTZ types.
-
-### Resolved issues
-
-<!--- FIR-28623 --->Fixed a bug where floating point values `-0.0` and `+0.0`, as well as `-nan` and `+nan` were not considered equal in distributed queries.
-
-<!--- FIR-18709 --->Updated error log for upload failure for clarity
-
-<!--- FIR-29759 --->TRY_CAST from TEXT to NUMERIC now works as expected: if the value cannot be parsed as NUMERIC it produces null.
+Escape string literals now support octal and Unicode escape sequences. As a result, escape string literals now behave exactly like PostgreSQL. Example: `SELECT E'\U0001F525b\x6F\154t';` returns `🔥bolt`. If the setting `standard_conforming_strings` is not enabled for you, regular string literals (e.g., `SELECT 'foo';`) will also recognize the new escape sequences. However, we recommend exclusively using escape string literals for using escape sequences. Please be aware that you will get different results if you previously used (escape) string literals containing the syntax we now use for Unicode and octal escape sequences.
