@@ -34,4 +34,4 @@ Escape [string literals](../general-reference/data-types.md) now support octal a
 
 <!--- FIR-29729 --->**Remove old deprecate REGENERATE AGGREGATING INDEX**
 
- 'REGENERATE AGGREGATING INDEX' syntax has been removed.  
+ `REGENERATE AGGREGATING INDEX` syntax has been removed.  
