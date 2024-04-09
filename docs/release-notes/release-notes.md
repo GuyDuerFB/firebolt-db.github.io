@@ -24,7 +24,7 @@ Firebolt might roll out releases in phases. New features and changes may not yet
 
 ### Enhancements, changes and new integrations
 
-<!--- FIR-25079 --->**New Identifier Rules for Table Expression Query**
+<!--- FIR-31191 --->**New Identifier Rules for Table Expression Query**
 
 In order to prevent table expression query failure, new structure for naming conventions have been added. The first character of an identifier must now be either a letter (a-z) or an underscore (_). After the initial character, identifiers can include letters, underscores, or digits (0-9). 
 
