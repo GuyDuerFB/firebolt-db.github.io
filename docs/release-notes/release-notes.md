@@ -24,6 +24,10 @@ Firebolt might roll out releases in phases. New features and changes may not yet
 
 ### Enhancements, changes and new integrations
 
+<!--- FIR-25079 --->**New Identifier Rules for Table Expression Query**
+
+In order to prevent table expression query failure, new structure for naming conventions have been added. The first character of an identifier must now be either a letter (a-z) or an underscore (_). After the initial character, identifiers can include letters, underscores, or digits (0-9). 
+
 <!--- FIR-25079 --->**Spilling Aggregations**
 
 Firebolt can now process most aggregations that exceed the available main memory of the engine by spilling to the SSD cache when needed. This happens transparently to the user. A query that made use of this capability will populate the `spilled_bytes` column in `information_schema.query_history`. Spilling does not support aggregations where a single group exceeds the available memory (e.g., `select count(distinct high_cardinality_column) from huge_table`) and may not yet work reliably for all aggregate functions or engine specs. We will continue improving the feature in upcoming releases.
