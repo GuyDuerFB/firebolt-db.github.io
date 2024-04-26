@@ -41,4 +41,5 @@ Escape [string literals](../data-types.md) now support octal and Unicode escape 
  `REGENERATE AGGREGATING INDEX` syntax has been removed.  
 
  **Disable Data Definition Language (DDL)**
+ 
  In previous versions, we provided the capability for users to execute Data Definition Language (DDL) statements on the system engine through the activation of a designated feature flag. However, subsequent analysis has revealed that this functionality is not widely utilized and presents considerable challenges in terms of providing efficient support for this capability in the forthcoming version of Firebolt. As a result, the decision has been made to disable the feature that permits the execution of DDL operations on the system engine in the current version of Firebolt. We recommend that users migrate these operations to the user engine. For operations such as creation, modification, and deletion pertaining to the engine, users are advised to utilize the Web User Interface.
