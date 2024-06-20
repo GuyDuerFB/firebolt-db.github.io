@@ -10,6 +10,10 @@ parent: Account and user management
 
 You create a Firebolt account by subscribing to Firebolt using the AWS Marketplace. This topic guides you through that process and explains important choices you make during account setup.
 
+Have a look at this short video guiding you through the process. Part II of the video, describing how to connect Firebolt to your S3 bucket, [can be found here](https://docs.firebolt.io/loading-data/configuring-aws-role-to-access-amazon-s3.html).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Hniv9u4w7lI" title="Part 1 - Getting Started With Firebolt - Subscribing to Firebolt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Prerequisites
 
 * You need a valid AWS account ID and an AWS user with permission to subscribe in the AWS Marketplace. For more information, see [Controlling access to AWS Marketplace subscriptions](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html).
